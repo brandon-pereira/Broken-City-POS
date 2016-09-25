@@ -1,0 +1,7 @@
+getItemsForSeat = SELECT item_no, item_name, base_price, side1, side2, side3, extra1, extra2, extra3 FROM items_on_order WHERE orderNo = " + orderNo
+
+getItemOption(itemNo): SELECT * FROM item_option WHERE fk_item_no=item_no
+
+
+--**Note: The item_on_order table does not need a column for the seat number, the seat number is attached to the order number already
+--The function created addNewItemOnOrder needs to be modified when this has been removed
